@@ -35,13 +35,7 @@
     </div>
   </nav>
 
-  <% if current_user %>
-    <p id="logging_in">Logged in as <%= link_to current_user.name,  user_path(current_user) %></p>
-    <p id="logging_out"><%= link_to 'Log Out', logout_path %></p>
-  <% else %>
-    <p><%= link_to 'Sign Up', signup_path, :class => 'btn btn-success' %> or
-       <%= link_to 'Log In', login_path, :class => 'btn btn-success' %></p>
-  <% end %>
+
 
   <p class="bg-success", id="notice"><%= flash[:notice] %></p>
   <p class="bg-danger", id="alert"><%= flash[:alert] %></p>
