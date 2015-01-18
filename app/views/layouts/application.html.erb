@@ -16,20 +16,20 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand navbar-left">
-        <%= link_to "Twitblogger", root_path,:class => 'btn btn-warning btn-lg' %>
+        <%= link_to "Twitblogger", root_path,:class => 'btn btn-primary btn-lg' %>
         <% if current_user != nil %>
-          <%= link_to "My Tweets", user_path(current_user), :class => 'btn btn-warning btn-lg' %>
+          <%= link_to "My Tweets", user_path(current_user), :class => 'btn btn-primary btn-lg' %>
         <% end %>
       </div>
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <div class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <p id="logging_in">Logged in as <%= link_to current_user.name,  user_path(current_user), :class => 'btn btn-warning btn-lg' %>
-          <%= link_to 'Log Out', logout_path, :class => 'btn btn-warning btn-lg' %></p>
+          <p id="logging_in">Logged in as <%= link_to current_user.name,  user_path(current_user), :class => 'btn btn-primary btn-lg' %>
+          <%= link_to 'Log Out', logout_path, :class => 'btn btn-primary btn-lg' %></p>
         <% else %>
-          <p id="need_signup"><%= link_to 'Sign Up', signup_path, :class => 'btn btn-warning btn-lg' %> or
-          <%= link_to 'Log In', login_path, :class => 'btn btn-warning btn-lg' %></p>
+          <p id="need_signup"><%= link_to 'Sign Up', signup_path, :class => 'btn btn-primary btn-lg' %> or
+          <%= link_to 'Log In', login_path, :class => 'btn btn-primary btn-lg' %></p>
         <% end %>
       </div>
     </div>
