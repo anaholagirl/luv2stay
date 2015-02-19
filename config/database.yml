@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: twitblogger_development
+  database: luv2stay_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: twitblogger_test
+  database: luv2stay_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: twitblogger_production
-  username: twitblogger
-  password: <%= ENV['TWITBLOGGER_DATABASE_PASSWORD'] %>
+  database: luv2stay_production
+  username: luv2stay
+  password: <%= ENV['LUV2STAY_DATABASE_PASSWORD'] %>

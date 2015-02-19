@@ -37,10 +37,4 @@ ActiveRecord::Schema.define(version: 20150219040621) do
     t.string "password_digest"
   end
 
-  create_table "users_tables", force: true do |t|
-    t.string "name"
-    t.string "password_digest"
-    t.string "email"
-  end
-
 end
