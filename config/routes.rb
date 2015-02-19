@@ -64,8 +64,10 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :rentals
+  end
 
   resources :rentals do
     resources :photos
+  end
 
 end
