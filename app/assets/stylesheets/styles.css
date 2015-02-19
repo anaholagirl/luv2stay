@@ -68,7 +68,6 @@ FOOTER
 ***********************/
 
 footer {
-  font-size: 1.5em;
   clear: both;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -80,6 +79,7 @@ footer {
   margin-left: 50px;
   text-align: left;
   color: #666B6E;
+  font-size: 1em;
 }
 
 /*.social-icon {
