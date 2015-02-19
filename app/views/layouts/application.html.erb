@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <%= render 'header' %>
+  <%= render 'layouts/header' %>
 
   <p class="bg-success", id="notice"><%= flash[:notice] %></p>
   <p class="bg-danger", id="alert"><%= flash[:alert] %></p>
@@ -16,7 +16,7 @@
 
 <%= yield %>
 
-  <%= render 'footer' %>
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>
