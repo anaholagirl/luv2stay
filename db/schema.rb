@@ -11,15 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118225503) do
+ActiveRecord::Schema.define(version: 20150219040621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "photos", force: true do |t|
+    t.string  "name"
+    t.integer "user_id"
+    t.integer "rental_id"
+  end
+
+  create_table "rentals", force: true do |t|
+    t.string  "location"
+    t.integer "bedrooms"
+    t.integer "baths"
+    t.integer "sleeps"
+    t.decimal "price",    precision: 8, scale: 2
+    t.decimal "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
+  end
+
+  create_table "users_tables", force: true do |t|
+    t.string "name"
+    t.string "password_digest"
+    t.string "email"
   end
 
 end
