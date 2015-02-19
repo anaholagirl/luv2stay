@@ -62,5 +62,10 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :users
+  resources :users do
+    resources :rentals
+
+  resources :rentals do
+    resources :photos
+
 end
